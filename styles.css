@@ -2,6 +2,12 @@
   font-weight: bold;
 }
 
+img {
+  min-width: 0;
+  width: 100%;
+  height: auto;
+}
+
 ul {
   list-style: none;
 }
@@ -16,8 +22,34 @@ body {
   line-height: 1.5;
 }
 
+header {
+  background-color: #0199c8;
+  color: rgb(243, 238, 228);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+}
+
+.header-left {
+  flex-basis: content;
+}
+
+#info button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(243, 238, 228);
+  margin-bottom: 20px;
+}
+
+.header-right {
+  padding: 40px;
+}
+
 .img-header {
-  max-width: 400px;
+  max-width: 500px;
+  border-radius: 10px;
 }
 
 .activities-pic {
