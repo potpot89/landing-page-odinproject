@@ -1,53 +1,11 @@
+/* simple text decoration */
+
 .bold {
   font-weight: bold;
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  line-height: 1.5;
-}
-img {
-  min-width: 0;
-  width: 100%;
-  height: auto;
-}
-
-ul {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(243, 238, 228);
-}
-
-nav {
-  border: 1px solid red;
-  display: flex;
-  color: rgb(243, 238, 228);
-  background-color: #0199c8;
-
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-header {
-  background-color: #0199c8;
-  color: rgb(243, 238, 228);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 30px;
-}
-
-.header-left {
-  flex-basis: content;
+.logo {
+  font-size: 24px;
 }
 
 #info button {
@@ -61,13 +19,24 @@ header {
   padding: 40px;
 }
 
+/* pictures styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .img-header {
-  max-width: 500px;
   border-radius: 10px;
 }
 
 .activities-pic {
-  max-width: 30%;
+  max-width: 150px;
+}
+
+/* text styles */
+
+p {
+  line-height: 1.2;
 }
 
 h1 {
@@ -76,12 +45,65 @@ h1 {
 
 h2 {
   font-size: 36px;
+  text-align: center;
+}
+
+/*h2 container background color */
+.activities-title {
+  background-color: rgb(8, 21, 63);
+  color: rgb(243, 238, 228);
 }
 
 nav {
   font-size: 18px;
 }
 
-.logo {
-  font-size: 24px;
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(243, 238, 228);
+} /* end of simple text decoration */
+
+body /*flex container */ {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  /*navbar flex container*/
+  display: flex;
+  color: rgb(243, 238, 228);
+  background-color: rgb(8, 21, 63);
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 8px 8px 8px;
+}
+.navbar ul {
+  display: flex; /*text in a single row*/
+  gap: 30px;
+  margin: 0;
+}
+
+header {
+  /*flex container for the whole header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background: linear-gradient(
+    130deg,
+    rgb(70, 138, 197) 29%,
+    rgb(130, 228, 240) 54%,
+    rgb(100, 215, 215) 65%,
+    rgb(214, 220, 188) 76%,
+    rgb(107, 157, 220) 90%
+  );
+  color: rgb(243, 238, 228);
 }
