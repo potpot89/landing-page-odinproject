@@ -1,30 +1,30 @@
 /* simple text decoration */
 
-.bold {
-  font-weight: bold;
-}
-
 .logo {
   font-size: 24px;
 }
-
-#info button {
+button {
   padding: 10px;
   border-radius: 10px;
   background-color: rgb(243, 238, 228);
+  min-width: max-content; /*it prevents the text inside the button from shrinking */
+}
+
+#info button {
   margin-bottom: 20px;
 }
 
 .header-right {
-  padding: 40px;
+  padding: 10px;
+}
+
+.header-right img {
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
 }
 
 /* style pictures */
-.img-header {
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
-}
 
 .activities-pic {
   max-height: 250px;
@@ -39,22 +39,17 @@ p {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 42px;
 }
 
 h2 {
   font-size: 36px;
   text-align: center;
+  color: #dafbff;
 }
 
-/*h2 container background color */
-.activities-title {
-  background-color: rgb(8, 21, 63);
-  color: rgb(243, 238, 228);
-}
-
-nav {
-  font-size: 18px;
+h3 {
+  margin-bottom: -12px;
 }
 
 ul {
@@ -63,7 +58,22 @@ ul {
 a {
   text-decoration: none;
   color: rgb(243, 238, 228);
-} /* end of simple text decoration */
+}
+
+a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #edeeaf;
+}
+
+footer a {
+  color: blue;
+}
+/* end of simple text decoration */
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -74,12 +84,13 @@ body {
 
 nav {
   /*navbar flex container*/
+  font-size: 18px;
   display: flex;
   color: rgb(243, 238, 228);
   background-color: rgb(8, 21, 63);
   justify-content: space-between;
   align-items: flex-start;
-  padding: 10px 8px 8px 8px;
+  padding: 10px 30px 8px 30px;
 }
 .navbar ul {
   display: flex; /*text in a single row*/
@@ -90,10 +101,12 @@ nav {
 header {
   /*flex container for the whole header */
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 30px;
-  padding: 20px;
+  padding: 3em 8em;
   background: linear-gradient(
     130deg,
     rgb(70, 138, 197) 29%,
@@ -111,12 +124,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0px 6em;
 }
 
 .activities ul {
   /*major container for the items of the container .activities */
   display: flex;
-  gap: 20px;
+  gap: 30px;
+
   justify-content: center; /*it allows the items that wrap, to go at the center when wrapping */
   flex-wrap: wrap; /*putting wrap in this container, makes the pictures move to the next line */
 }
@@ -133,4 +148,80 @@ header {
 }
 .content {
   background-color: rgb(8, 21, 63);
+}
+
+/* working on the quotes section */
+
+.container-quotes {
+  background: linear-gradient(
+    130deg,
+    rgb(70, 138, 197) 29%,
+    rgb(130, 228, 240) 54%,
+    rgb(100, 215, 215) 65%,
+    rgb(214, 220, 188) 76%,
+    rgb(107, 157, 220) 90%
+  );
+  font-size: 20px;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 10em;
+  justify-content: center;
+  color: #08153f;
+  font-weight: lighter;
+}
+
+.cit {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+.end {
+  color: white;
+
+  box-shadow: 2px 1px 1px #edeeaf;
+  border: 1px solid #bdeaf5;
+  border-radius: 20px;
+
+  margin: 8em 12em;
+  gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 3em;
+}
+
+footer {
+  background: linear-gradient(
+    130deg,
+    rgb(70, 138, 197) 29%,
+    rgb(130, 228, 240) 54%,
+    rgb(100, 215, 215) 65%,
+    rgb(214, 220, 188) 76%,
+    rgb(107, 157, 220) 90%
+  );
+  padding: 20px;
+  text-align: center;
+  color: #08153f;
+}
+
+/* on smaller screens the img in header wraps */
+@media all and (max-width: 800px) {
+  header {
+    flex-wrap: wrap;
+  }
+  .end {
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 2em;
+    margin: 5em 5em;
+  }
+}
+
+@media all and (width > 1200px) {
+  .end {
+    gap: 120px;
+  }
 }
