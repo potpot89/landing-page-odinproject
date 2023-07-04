@@ -28,6 +28,8 @@
 
 .activities-pic {
   max-height: 250px;
+  border: 5px solid #61b2d8;
+  border-radius: 20px;
 }
 
 /* text styles */
@@ -106,7 +108,6 @@ header {
 /* end of the styling of the top part */
 
 .activities {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,7 +127,10 @@ header {
 .dolphins,
 .tortoise {
   width: min-content;
-  border: 1px solid black;
+  color: #dafbff;
   margin: 10px;
   text-align: center;
+}
+.content {
+  background-color: rgb(8, 21, 63);
 }
