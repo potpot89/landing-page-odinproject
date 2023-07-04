@@ -209,6 +209,10 @@ footer {
 
 /* on smaller screens the img in header wraps */
 @media all and (max-width: 800px) {
+  nav {
+    justify-content: center;
+  }
+
   header {
     flex-wrap: wrap;
   }
@@ -217,6 +221,13 @@ footer {
     gap: 5px;
     padding: 2em;
     margin: 5em 5em;
+  }
+  .container-quotes {
+    padding: 20px;
+  }
+  .header-right {
+    min-width: 400px;
+    height: auto;
   }
 }
 
